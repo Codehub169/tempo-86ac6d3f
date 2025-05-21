@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherWise Forecast</title>
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Application Header -->
+    <header>
+        <h1><span class="material-icons">wb_sunny</span> WeatherWise</h1>
+        <p>Your personal weather forecaster for today and beyond</p>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Section for weather search form -->
+        <section id="search-section" class="card">
+            <h2><span class="material-icons">search</span> Search Weather</h2>
+            <form id="weather-form">
+                <!-- City input field (required) -->
+                <div class="form-group">
+                    <label for="city"><span class="material-icons">location_city</span> City:</label>
+                    <input type="text" id="city" name="city" placeholder="E.g., London, New York" required>
+                </div>
+                <!-- Date input field (optional) -->
+                <div class="form-group">
+                    <label for="date"><span class="material-icons">calendar_today</span> Date (Optional):</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <!-- Time input field (optional, relevant if date is specified) -->
+                <div class="form-group">
+                    <label for="time"><span class="material-icons">access_time</span> Time (Optional, if date is set):</label>
+                    <input type="time" id="time" name="time">
+                </div>
+                <!-- Submit button for the form -->
+                <button type="submit" class="button"><span class="material-icons">cloud_queue</span> Get Weather</button>
+            </form>
+        </section>
+
+        <!-- Section to display weather results or errors (initially hidden) -->
+        <section id="weather-display-section" class="card results-card" style="display:none;">
+            <h2><span class="material-icons">thermostat</span> Weather Details</h2>
+            <!-- Container for weather data -->
+            <div id="weather-results"></div>
+            <!-- Container for error messages (initially hidden) -->
+            <div id="error-message" class="error-message" style="display:none;"></div>
+        </section>
+
+        <!-- Section to display search history -->
+        <section id="history-section" class="card">
+            <h2><span class="material-icons">history</span> Search History</h2>
+            <!-- Unordered list for search history items -->
+            <ul id="search-history-list">
+                <li class="history-placeholder">No searches yet. Your recent searches will appear here.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Application Footer -->
+    <footer>
+        <p>&copy; 2023 WeatherWise. Weather data powered by Open-Meteo.</p>
+        <!-- Decorative background image for the footer -->
+        <img src="https://source.unsplash.com/random/1200x300/?weather,skyline" alt="Decorative weather skyline image" class="footer-img">
+    </footer>
+
+    <!-- Link to the client-side JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

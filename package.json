@@ -1,0 +1,22 @@
+{
+  "name": "weather-forecast-app",
+  "version": "1.0.0",
+  "description": "A web application for weather forecasting and history.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "history"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "node-fetch": "^2.6.7"
+  }
+}
